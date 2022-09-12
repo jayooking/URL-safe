@@ -27,6 +27,15 @@ button {
     color: #415b93;
 }
 
+.deli {
+    background-color: rgb(201, 65, 47);
+    color: #ffffff;
+    border: none;
+    border-radius: 1px;
+    padding: 1px 4px 1px 4px;
+    font-weight: lighter;
+}
+
 ul {
     margin-top: 20px;
     list-style: none;
