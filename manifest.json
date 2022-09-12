@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Hash Links",
+    "author": "jayooking",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "description": "This extension saves your url links straight from your tab or from the input field of the popup.",
+    "permissions": [
+        "tabs"
+    ]
+}
