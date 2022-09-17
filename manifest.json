@@ -6,6 +6,17 @@
     "action": {
         "default_popup": "index.html"
     },
+    "content_scripts": [
+        {
+            "matches": [
+               "<all_urls>" 
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
     "icons": {
         "16": "icon.png",
         "48": "icon.png",
@@ -13,6 +24,7 @@
     },
     "description": "This extension saves your url links straight from your tab or from the input field of the popup.",
     "permissions": [
+        "storage",
         "tabs"
-    ]    
+    ]
 }

@@ -7,6 +7,8 @@ const deleteBtn = document.getElementById("delete-btn")
 const tabBtn = document.getElementById("tab-btn")
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
+let runLeads = document.getElementById("rLeads")
+
 tabBtn.addEventListener("click", function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tab){
         myLeads.push(tab[0].url)
@@ -49,13 +51,11 @@ function saveLeads() {
     // Clear Field
     inputEl.value = ""
 
-    // Check
-    console.log(localStorage.getItem("myLeads"))
-
     // Output Leads
     // render(myLeads)
     location.reload()
 }
+
 
 function render(leads) {
     let listItems = ""
@@ -83,3 +83,11 @@ function deleBtn(i) {
         localStorage.setItem("myLeads", JSON.stringify(myLeads))
     })
 }
+
+let testTTT = document.getElementById("test-btn")
+
+testTTT.addEventListener("click", function() {
+    chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
+        console.log(response.farewell)
+    })
+})
